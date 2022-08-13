@@ -1,0 +1,67 @@
+//Other Scss File Imports
+@import url(../styles/_animations.scss);
+
+//Main Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@font-face {
+    font-family: morangaBold;
+    src: url(../fonts/moranga_bold.otf);
+}
+
+@font-face {
+    font-family: morangaRegular;
+    src: url(../fonts/moranga_regular.otf);
+}
+
+//Color veriables
+$font-dark-primary: rgb(13, 17, 23);
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    color: $font-dark-primary;
+    font-family: "Montserrat", sans-serif;
+}
+.App {
+    background-color: rgb(247, 242, 242);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: morangaBold, sans-serif;
+}
+
+a,
+p,
+span,
+ul,
+li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+}
+a {
+    text-decoration: none;
+    color: $font-dark-primary;
+    &:focus {
+        color: $font-dark-primary;
+    }
+}
+
+img {
+    width: 100%;
+}
