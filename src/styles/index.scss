@@ -1,5 +1,6 @@
 //Other Scss File Imports
 @import url(../styles/_animations.scss);
+@import url(../styles/_layout.scss);
 
 //Main Fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
@@ -25,17 +26,24 @@ $font-dark-primary: rgb(13, 17, 23);
     box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+    height: 100%;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $font-dark-primary;
     font-family: "Montserrat", sans-serif;
 }
 .App {
     background-color: rgb(247, 242, 242);
+    min-height: 100%;
 }
 h1,
 h2,
@@ -52,7 +60,7 @@ span,
 ul,
 li {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 a {
     text-decoration: none;
@@ -64,4 +72,82 @@ a {
 
 img {
     width: 100%;
+}
+
+.btn {
+    box-shadow: #f0f2f8 0px 0px 0px 2px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 18px;
+    background: transparent;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: all 0.2s ease-out 0s;
+    will-change: box-shadow, transform;
+    font-size: 16px;
+    color: $font-dark-primary;
+    &.withIcon {
+        svg {
+            margin-right: 5px;
+            transform: rotate(180deg);
+            transition: all 0.3s ease;
+        }
+    }
+    &.collapes {
+        width: 36px;
+        height: 36px;
+        border-radius: 500px;
+        padding: 0;
+        transition: all 0.3s ease;
+        .arrow-up {
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: absolute;
+            right: 0px;
+            svg {
+                transform: rotate(0deg);
+                margin: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 18px;
+            }
+        }
+
+        span {
+            opacity: 0;
+            transform: translateX(-12px) translateZ(0px);
+            margin: 0px 36px 0px 16px;
+            font-size: 14px;
+            line-height: normal;
+            letter-spacing: 0.3px;
+            font-weight: 400;
+            white-space: nowrap;
+            color: rgb(13, 17, 23);
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            width: auto;
+            box-shadow: #ffffff 0px 0px 0px 1px, #ffffff80 0px 0px 0px 6px;
+            transition: box-shadow 0.2s ease-out 0s;
+            svg {
+                margin-left: 0px;
+            }
+            span {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-out 0s;
+        box-shadow: #f0f2f8 0px 0px 0px 5px;
+    }
 }

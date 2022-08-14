@@ -1,0 +1,30 @@
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    @media (min-width: 1366px) {
+        width: 1200px;
+    }
+}
+
+.react-grid-item {
+    border-radius: 32px;
+    overflow: hidden;
+    // background: rgb(255, 255, 255);
+    background-color: lightcoral;
+    box-shadow: transparent 0px 0px;
+    padding: 30px 25px;
+    cursor: grab;
+    will-change: transform;
+    transition: all 500ms ease 0s;
+    &.react-grid-placeholder {
+        background: rgb(216, 216, 216) !important;
+    }
+}

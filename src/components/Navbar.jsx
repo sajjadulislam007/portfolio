@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/logo(sajjad).svg";
+import icons from "../icons";
 
 //styles
 import "../styles/_navbar.scss";
@@ -12,9 +13,10 @@ const Navbar = () => {
     const [lebelPosition, setLebelPosition] = useState("");
 
     const handleMenuLebelAnimation = (e) => {
-        menuItems.map((item) => {
+        menuItems.map((item, index) => {
             if (e.target.parentElement.classList.contains(item)) {
                 setLebelPosition(item);
+                console.log(index + 1);
             }
         });
     };
@@ -36,22 +38,22 @@ const Navbar = () => {
                                     lebelPosition === "all"
                                         ? "10px"
                                         : lebelPosition === "about"
-                                        ? "72px"
+                                        ? "68px"
                                         : lebelPosition === "projects"
-                                        ? "165px"
+                                        ? "150px"
                                         : lebelPosition === "media"
-                                        ? "280px"
+                                        ? "248px"
                                         : "10px",
                                 width:
                                     lebelPosition === "all"
-                                        ? "60px"
+                                        ? "50px"
                                         : lebelPosition === "about"
-                                        ? "90px"
+                                        ? "75px"
                                         : lebelPosition === "projects"
-                                        ? "110px"
-                                        : lebelPosition === "media"
                                         ? "90px"
-                                        : "60px",
+                                        : lebelPosition === "media"
+                                        ? "75px"
+                                        : "50px",
                             }}
                         ></span>
                         {menuItems.map((menuItem) => (
@@ -60,14 +62,20 @@ const Navbar = () => {
                                 className={`${menuItem} item`}
                                 onClick={handleMenuLebelAnimation}
                             >
-                                <span>{menuItem}</span>
+                                <span
+                                    className={`${
+                                        lebelPosition ? "active" : ""
+                                    }`}
+                                >
+                                    {menuItem}
+                                </span>
                             </li>
                         ))}
                     </ul>
                 </div>
 
                 <a href="mailto:sajjadul060@gmail.com" className="contact">
-                    Gen in Touch
+                    Contact {icons.email_black}
                 </a>
             </div>
         </nav>
