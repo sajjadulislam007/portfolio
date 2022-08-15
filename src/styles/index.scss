@@ -62,6 +62,9 @@ li {
     font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
 }
+p {
+    line-height: 1.5;
+}
 a {
     text-decoration: none;
     color: $font-dark-primary;
@@ -89,8 +92,11 @@ img {
     color: $font-dark-primary;
     &.withIcon {
         svg {
+            &#Arrow_Rotate {
+                transform: rotate(180deg);
+            }
             margin-right: 5px;
-            transform: rotate(180deg);
+            transform: rotate(0deg);
             transition: all 0.3s ease;
         }
     }
@@ -121,8 +127,6 @@ img {
         }
 
         span {
-            opacity: 0;
-            transform: translateX(-12px) translateZ(0px);
             margin: 0px 36px 0px 16px;
             font-size: 14px;
             line-height: normal;
@@ -133,15 +137,10 @@ img {
             transition: all 0.3s ease;
         }
         &:hover {
-            width: auto;
             box-shadow: #ffffff 0px 0px 0px 1px, #ffffff80 0px 0px 0px 6px;
             transition: box-shadow 0.2s ease-out 0s;
             svg {
                 margin-left: 0px;
-            }
-            span {
-                opacity: 1;
-                transform: none;
             }
         }
     }
@@ -150,4 +149,12 @@ img {
         transition: box-shadow 0.2s ease-out 0s;
         box-shadow: #f0f2f8 0px 0px 0px 5px;
     }
+}
+
+//All cards styles
+.card {
+    background: rgb(255, 255, 255);
+    box-shadow: transparent 0px 0px;
+    padding: 30px;
+    height: inherit;
 }

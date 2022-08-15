@@ -45,3 +45,46 @@
         transform: translate3d(4px, 0, 0);
     }
 }
+
+//Floting Image
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-5px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+//toogle animations
+@keyframes zoom-in {
+    0% {
+        transform: scale(0.5, 0.5) rotate(-20deg);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(0, 0) rotate(-40deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1, 1) rotate(0deg);
+        opacity: 1;
+    }
+}
+@keyframes zoom-in-2 {
+    0% {
+        transform: scale(0.5, 0.5) rotate(20deg);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(0, 0) rotate(40deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1, 1) rotate(0deg);
+        opacity: 1;
+    }
+}
