@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import icons from "../icons";
-
-//styles
-import "../styles/_home.scss";
 import AnimatedBtn from "./AnimatedBtn";
-import GenericBtn from "./GenericBtn";
 import Intro from "./home-components/Intro";
 import ModeSwitch from "./home-components/ModeSwitch";
+import MySkills from "./home-components/MySkills";
 import ProjectOne from "./home-components/ProjectOne";
 import ProjectThree from "./home-components/ProjectThree";
 import ProjectTwo from "./home-components/ProjectTwo";
+
+//styles
+import "../styles/_home.scss";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 const Home = () => {
     const [buttonCollapseOne, setButtonCollapseOne] = useState(false);
     const [buttonCollapseTwo, setButtonCollapseTwo] = useState(false);
     const [buttonCollapseThree, setButtonCollapseThree] = useState(false);
+    const [buttonCollapseFour, setButtonCollapseFour] = useState(false);
     const [layout, setlayout] = useState([
         { i: "intro", x: 0, y: 0, w: 4, h: 1 },
         { i: "location", x: 4, y: 0, w: 2, h: 1 },
@@ -112,8 +113,14 @@ const Home = () => {
                 >
                     <ProjectThree buttonCollapse={buttonCollapseThree} />
                 </div>
-                <div key={layout[9].i}>
-                    <div>{layout[9].i}</div>
+                <div
+                    key={layout[9].i}
+                    onMouseEnter={() => setButtonCollapseFour(true)}
+                    onMouseLeave={() => setButtonCollapseFour(false)}
+                >
+                    <MySkills
+                        buttonCollapse={buttonCollapseFour}
+                    />
                 </div>
             </ResponsiveGridLayout>
         </div>
