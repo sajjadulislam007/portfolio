@@ -23,9 +23,9 @@ const Intro = () => {
                 </div>
             </div>
             <p>
-                Hi There, I am <span>Md Sajjadul Islam</span>, a front-end
-                developer from Dhaka, Bangladesh. I'm interested in JavaScript,
-                React, Node, Python, Cryptocurrencies, Travel and Music.
+                Hi There, I am <span>Sajjad</span>, a front-end developer from
+                Dhaka, Bangladesh. I'm interested in JavaScript, React, Node,
+                Python, Cryptocurrencies, Travel and Music.
             </p>
             <GenericBtn
                 icons={icons.arrow_rotate}

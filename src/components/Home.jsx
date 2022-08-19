@@ -11,6 +11,7 @@ import ProjectTwo from "./home-components/ProjectTwo";
 
 //styles
 import "../styles/_home.scss";
+import Twitter from "./home-components/Twitter";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 const Home = () => {
@@ -82,15 +83,7 @@ const Home = () => {
                     <div>{layout[3].i}</div>
                 </div>
                 <div key={layout[4].i}>
-                    <div>
-                        <AnimatedBtn
-                            width={{
-                                width: "36px",
-                            }}
-                            icons={icons.arrow_up}
-                            link="www.google.com"
-                        />
-                    </div>
+                    <Twitter />
                 </div>
                 <div
                     key={layout[5].i}
