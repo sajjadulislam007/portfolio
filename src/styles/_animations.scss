@@ -89,113 +89,26 @@
     }
 }
 
-//Gradient Color Animatons
-@keyframes animate_1 {
-    25% {
-        box-shadow: 0 70px 180px rgba(243, 86, 146, 0.5);
+//music bar animation
+@keyframes playing {
+    0% {
+        height: 3px;
     }
-
     50% {
-        box-shadow: 0 70px 180px rgba(254, 201, 63, 0.5);
+        height: 12px;
     }
-
-    75% {
-        box-shadow: 0 70px 180px rgba(93, 248, 240, 0.5);
-    }
-
     100% {
-        box-shadow: 0 70px 180px rgba(243, 86, 146, 0.5);
+        height: 3px;
     }
 }
-
-@-webkit-keyframes animate_1 {
-    25% {
-        box-shadow: 0 70px 180px rgba(243, 86, 146, 0.5);
+@-webkit-keyframes playing {
+    0% {
+        height: 3px;
     }
-
     50% {
-        box-shadow: 0 70px 180px rgba(254, 201, 63, 0.5);
+        height: 12px;
     }
-
-    75% {
-        box-shadow: 0 70px 180px rgba(93, 248, 240, 0.5);
-    }
-
     100% {
-        box-shadow: 0 70px 180px rgba(243, 86, 146, 0.5);
-    }
-}
-
-/* animate-2 */
-@keyframes animate_2 {
-    25% {
-        box-shadow: 0 0 130px 150px rgba(254, 201, 63, 0.7);
-    }
-
-    50% {
-        box-shadow: 0 0 130px 150px rgba(93, 248, 240, 0.7);
-    }
-
-    75% {
-        box-shadow: 0 0 130px 150px rgba(243, 86, 146, 0.5);
-    }
-
-    100% {
-        box-shadow: 0 0 130px 150px rgba(254, 201, 63, 0.7);
-    }
-}
-
-@-webkit-keyframes animate_2 {
-    25% {
-        box-shadow: 0 0 130px 150px rgba(254, 201, 63, 0.7);
-    }
-
-    50% {
-        box-shadow: 0 0 130px 150px rgba(93, 248, 240, 0.7);
-    }
-
-    75% {
-        box-shadow: 0 0 130px 150px rgba(243, 86, 146, 0.5);
-    }
-
-    100% {
-        box-shadow: 0 0 130px 150px rgba(254, 201, 63, 0.7);
-    }
-}
-
-/* animate-3 */
-@keyframes animate_3 {
-    25% {
-        box-shadow: 0 0 130px 150px rgba(93, 248, 240, 0.7);
-    }
-
-    50% {
-        box-shadow: 0 0 130px 150px rgba(243, 86, 146, 0.5);
-    }
-
-    75% {
-        box-shadow: 0 0 130px 150px rgba(254, 201, 63, 0.7);
-    }
-
-    100% {
-        box-shadow: 0 0 130px 150px rgba(93, 248, 240, 0.7);
-    }
-}
-
-@-webkit-keyframes animate_3 {
-    25% {
-        box-shadow: 0 0 130px 150px rgba(93, 248, 240, 0.7);
-    }
-
-    50% {
-        box-shadow: 0 0 130px 150px rgba(243, 86, 146, 0.5);
-    }
-
-    75% {
-        box-shadow: 0 0 130px 150px rgba(254, 201, 63, 0.7);
-    }
-
-    100% {
-        box-shadow: 0 0 130px 150px rgba(93, 248, 240, 0.7);
+        height: 3px;
     }
 }

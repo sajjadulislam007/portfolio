@@ -12,6 +12,8 @@ import ProjectTwo from "./home-components/ProjectTwo";
 //styles
 import "../styles/_home.scss";
 import Twitter from "./home-components/Twitter";
+import Music from "./home-components/Music";
+import Location from "./home-components/Location";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 const Home = () => {
@@ -65,7 +67,7 @@ const Home = () => {
                     <Intro />
                 </div>
                 <div key={layout[1].i}>
-                    <div>{layout[1].i}</div>
+                    <Location />
                 </div>
                 <div
                     key={layout[2].i}
@@ -80,7 +82,7 @@ const Home = () => {
                     />
                 </div>
                 <div key={layout[3].i}>
-                    <div>{layout[3].i}</div>
+                    <Music />
                 </div>
                 <div key={layout[4].i}>
                     <Twitter />
@@ -93,7 +95,7 @@ const Home = () => {
                     <ProjectTwo buttonCollapse={buttonCollapseTwo} />
                 </div>
                 <div key={layout[6].i}>
-                    <div>{layout[6].i}</div>
+                    <Location />
                 </div>
 
                 <div key={layout[7].i}>
@@ -111,9 +113,7 @@ const Home = () => {
                     onMouseEnter={() => setButtonCollapseFour(true)}
                     onMouseLeave={() => setButtonCollapseFour(false)}
                 >
-                    <MySkills
-                        buttonCollapse={buttonCollapseFour}
-                    />
+                    <MySkills buttonCollapse={buttonCollapseFour} />
                 </div>
             </ResponsiveGridLayout>
         </div>

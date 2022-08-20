@@ -30,7 +30,7 @@ const Twitter = () => {
                     width: "36px",
                 }}
                 icons={Icons.arrow_up}
-                link="www.google.com"
+                link="http://www.google.com"
             />
         </div>
     );

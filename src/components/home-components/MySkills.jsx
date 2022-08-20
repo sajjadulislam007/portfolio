@@ -11,18 +11,7 @@ const MySkills = ({ buttonCollapse }) => {
             <div className="media">
                 <img src={SkillsBG} alt="SkillsBG" />
             </div>
-            <div className="gradient-bg">
-                <h2>Skills & Abilities</h2>
-                <AnimatedBtn
-                    width={{
-                        width: !buttonCollapse ? "36px" : "110px",
-                    }}
-                    buttonCollapse={buttonCollapse}
-                    title="Explore"
-                    icons={Icons.arrow_up}
-                    link="#"
-                />
-            </div>
+            <h2>Skillset</h2>
         </div>
     );
 };

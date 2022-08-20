@@ -68,6 +68,10 @@ p {
 a {
     text-decoration: none;
     color: $font-dark-primary;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.6;
+    }
     &:focus {
         color: $font-dark-primary;
     }
@@ -157,4 +161,5 @@ img {
     box-shadow: transparent 0px 0px;
     padding: 30px;
     height: inherit;
+    border-radius: 32px;
 }
